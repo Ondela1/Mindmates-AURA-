@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MindMate - AI Powered Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>MindMate - AI Powered Assistant</h1>
+        <div class="mode-selector">
+            <button id="mentalHealthMode" class="active">Mental Health Assistant</button>
+            <button id="studyBuddyMode">AI Study Buddy (RAG)</button>
+        </div>
+        <div id="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="How can I help you today?" autocomplete="off">
+            <button onclick="sendMessage()">Send</button>
+            <button id="voice-input-btn" title="Voice Input">🎤</button>
+        </div>
+    </div>
+
+    <audio id="tts-audio" style="display: none;"></audio>
+
+    <script>
+    const initialHistory = [{"role": "user", "text": "Hi"}, {"role": "model", "text": "Hello!"}];
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

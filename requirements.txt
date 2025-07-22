@@ -1,0 +1,9 @@
+Flask
+python-dotenv
+google-generativeai
+requests
+Flask-SQLAlchemy
+SpeechRecognition
+pyaudio # Required for SpeechRecognition microphone input
+gTTS # For Text-to-Speech (optional, but good for accessibility tool)
+openai # If you decide to use OpenAI's speech to text instead of SpeechRecognition
